@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users</title>
+		<link rel="stylesheet" type="text/css" href="users.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$("#form").submit(function(){
+					$("#first_name").append($("#form input[name=firstName]").val());
+					$("#last_name").append($("#form input[name=lastName]").val());
+					$("#email").append($("#form input[name=emailaddress]").val());
+					$("#contacts").append($("#form input[name=contactNo").val());
+				return false;
+			});
+
+			});
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr id="info">
+				<th id="first_name">First Name: </th>
+				<th id="last_name">Last Name: </th>
+				<th id="email">Email: </th>
+				<th id="contacts">Contact: </th>
+			</tr>
+		</table>
+			
+		<h2>Add User</h2>
+		<div id="blackBar"></div>
+		
+		<form id="form">
+			<label id="firstName">First Name: </label>
+			<input type="text" for="firstName" name="firstName" placeholder="First Name">
+			<br/>
+			<label id="lastName">Last Name: </label>
+			<input type="text" for="lastName" name="lastName" placeholder="Last Name">
+			<br/>
+			<label id="emailaddress">Email: </label>
+			<input type="text" for="emailaddress" name="emailaddress" placeholder="Email">
+			<br/>
+			<label id="contactNo">Phone #</label>
+			<input type="text" for="contactNo" name="contactNo" placeholder="Phone #">
+			<br/>
+			<input type="submit" name="submit">
+		</form>
+			
+	</body>
+</html>
